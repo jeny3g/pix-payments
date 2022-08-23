@@ -14,7 +14,7 @@ class CreatePixTransactionUseCase {
       throw new AppError("Amount is required");
     }
 
-    const response = await apiPayMee("teste", "teste").post<IPayMeeResponse>(
+    const response = await apiPayMee.post<IPayMeeResponse>(
       "checkout/transparent",
       request
     );
